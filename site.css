@@ -1,0 +1,178 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background: #ffffff;
+    background: rgba(251, 248, 248, 0.8);
+    border: 10px solid #F1EFEF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(199, 169, 169, 0.25);
+}
+
+header {
+    background: url(/images/flower2.jpg) #2b66c8 0 0 repeat;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+main {
+    background: rgba(251, 248, 248, 0.8);
+    border: 10px solid #F1EFEF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(199, 169, 169, 0.25);
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(208, 202, 202, 0.7);
+    border: 5px solid #E1DCDC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(154, 145, 145, 0.25);
+    color: indianred;
+    margin: 10px;
+}
+
+
+h1 {
+    margin-left: 5px;
+    font-family: Roboto Slab;
+    font-size: 36px;
+    line-height: 47px;
+    color: #D5BCBC;
+}
+
+h2 {
+    margin-left: 5px;
+    font-family: Roboto Slab;
+    font-size: 24px;
+    line-height: 32px;
+    color: #807171;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cccccc;
+    padding-right: 12px;
+}
+
+dl, dt, dd, ul, ol, li {
+    padding-right: 10px;
+}
+
+ol li, ul li {
+    padding-left: 0;
+}
+
+code {
+    background: #e8e8e8;
+    color: grey;
+    border: 5px solid #F1EFEF;
+    padding: 7px;
+    margin: 10px;
+}
+
+blockquote {
+    font-family: Schoolbell;
+    font-size: 13px;
+    color: #CCAFAF;
+    background: #FEF8F8;
+    border: 3px solid #F7F5F5;
+    padding: 10px;
+}
+
+aside {
+    font-family: Roboto Slab;
+    color: #766B6B;
+    background: #F4EEEE;
+    border: 5px solid #EEECEC;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 15px;
+    font-family: Roboto Slab;
+    font-size: 24px;
+    color: #D5BCBC;
+}
+
+.containerNav {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(208, 202, 202, 0.7);
+    border: 5px solid #E1DCDC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(154, 145, 145, 0.25);
+    color: indianred;
+    margin-top: 20px;
+}
+
+.containerAboutPhoto {
+    display: flex;
+    height: 320px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-evenly;
+    margin: 20px;
+    background-size: contain;
+}
+
+.containerAbout {
+    height: 320px;
+    background: #FBF8F8;
+    position: relative;
+    mix-blend-mode: luminosity;
+    align-content: space-around;
+    align-items: center;
+    border: 5px solid #F9ECEC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(244, 220, 220, 0.5);
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    background-size: contain;
+}
+
+.containerSkills {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    background: rgba(234, 226, 226, 0.7);
+    border: 5px solid #E8E1E1;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 10px rgba(219, 205, 205, 0.25);
+    margin: 20px;
+    padding: 20px;
+}
+
+.containerQuotes {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    margin: 20px;
+}
+
+.Skills {
+    box-shadow: inset -1px 0 0 #cccccc;
+}
+
+.MyPhoto {
+    border-radius: 4px;
+    border: 6px solid #EEE2E2;
+    box-shadow: inset 0px 4px 10px 10px rgba(248, 243, 243, 0.7);
+}
+
+.Child {
+    padding-left: 25px;
+}
+
