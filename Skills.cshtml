@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "My Skills";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="under_header">
+                <div id="img">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
+                </div>
+                <div class="containerMe">
+                    <h1>Опыт</h1>
+                    <h4>Хоть что-то</h4>
+                </div>
+                <div class="containerNav">
+                    <nav><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></nav>
+                    <nav><a asp-area="" asp-controller="Home" asp-action="Projects">Проекты</a></nav>
+                    <nav class="activenav"><a asp-area="" asp-controller="Home" asp-action="Skils">Опыт</a></nav>
+                </div>
+            </div>
+
+        </header>
+    </div>
+    <main>
+        <div class="main-aside">
+            <div class="left"></div>
+            <div class="_main">
+                <div class="containerSkills">
+
+                    <section style="        box-shadow: inset -1px 0 0 #cccccc;
+        padding-right: 10px;
+">
+                        <h3>Мои навыки</h3>
+                        <dl>
+                            <dt>Программирование</dt>
+                            <dd>C, C++, C#</dd>
+                            <dd>Java</dd>
+                        </dl>
+                        <dl>
+                            <dt>Математика</dt>
+                            <dd>Математический анализ</dd>
+                            <dd>Линейная алгебра</dd>
+                            <dd>Теория вероятностей и статистика</dd>
+                        </dl>
+                        <dl>
+                            <dt>Работа с ОС</dt>
+                            <dd>Windows</dd>
+                            <dd>Linux</dd>
+                        </dl>
+                        <code>Console.WriteLine("Hello, World!");</code>
+                    </section>
+                    <section style="box-shadow: inset -1px 0 0 #cccccc; padding-right: 10px;">
+                        <h3>Образование</h3>
+                        <ol reversed style="padding-left: 20px;">
+                            <li>Колледж МИД РФ</li>
+                            <li>Университет ИТМО</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Опыт</h3>
+                        <ul style="padding-left: 20px;">
+                            <li>Увы, не имеется</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="right">
+                <div class="_aside">
+                    <aside>Не пробуй лить H<sub>2</sub>O на комп!!! Это может закончиться очень печально...</aside>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>+7 (817) 542-45-46</p>
+        <p>yankova.nastya@yandex.ru</p>
+    </footer>
+</body>
+</html>
