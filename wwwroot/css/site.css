@@ -1,0 +1,319 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+* {
+    box-sizing: border-box; /* границы отрисовываются внутрь блока*/
+}
+
+body {
+    background: #FFFCFE;
+    background: rgba(251, 248, 248, 0.8);
+    border: 10px solid #F1EFEF;
+    box-shadow: 0px 4px 10px 10px rgba(199, 169, 169, 0.25);
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    background-image: url(/images/flower2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+p {
+    text-align: center;
+}
+
+main {
+    background: rgba(251, 248, 248, 0.8);
+    border: 10px solid #F1EFEF;
+    box-shadow: 0px 4px 10px 10px rgba(199, 169, 169, 0.25);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(208, 202, 202, 0.7);
+    border: 5px solid #E1DCDC;
+    box-shadow: 0px 4px 10px 10px rgba(154, 145, 145, 0.25);
+    color: #FFF7FC;
+    font-size: 24px;
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #b3a2a2;
+}
+
+
+h3 {
+    font-family: Roboto Slab;
+    font-size: 24px;
+    line-height: 32px;
+    color: #807171;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cccccc;
+    opacity: 1;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+code {
+    background-color: rgba(67, 61, 65, 0.6);
+    color: ghostwhite;
+    padding: 7px;
+    font-family: 'Courier New';
+    margin: 10px 10px 20px 10px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+blockquote {
+    font-family: Schoolbell;
+    font-size: 13px;
+    color: #CCAFAF;
+    background: #FEF8F8;
+    border: 3px solid #F7F5F5;
+    padding: 10px;
+}
+
+.main-aside {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+._main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 20%;
+    align-self: center;
+}
+
+._aside {
+    background: rgba(208, 202, 202, 0.7);
+    box-shadow: 0px 4px 10px 10px rgba(154, 145, 145, 0.25);
+    width: 150px;
+    height: 500px;
+    margin: auto 0 auto auto;
+    display: flex;
+    align-items: center;
+}
+
+
+aside {
+    font-family: Roboto Slab;
+    color: #FFF7FC;
+    margin: auto 5px auto 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+nav {
+    font-family: Roboto Slab;
+    font-size: 24px;
+    color: #D5BCBC;
+}
+
+ol {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul {
+    list-style-image: none;
+    list-style-type: circle;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+header h1 {
+    text-shadow: -1px -1px #FFF, -2px -2px #FFF, -1px 1px #FFF, -2px 2px #FFF, 1px 1px #FFF, 2px 2px #FFF, 1px -1px #FFF, 2px -2px #FFF, -3px -3px 2px #BBB, -3px 3px 2px #BBB, 3px 3px 2px #BBB, 3px -3px 2px #BBB;
+    color: #C79BD4;
+    transition: all 1s;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    
+
+}
+
+    header h1:hover {
+        color: #F5E8F9;
+    }
+
+header h4 {
+    text-shadow: 1px 1px 0 #827087, 1px -1px 0 #827087, -1px 1px 0 #827087, -1px -1px 0 #827087;
+    color: white;
+    transition: all 1s;
+    margin: 0;
+    padding: 5px 0px 15px 0px;
+}
+
+    header h4:hover {
+        text-shadow: 1px 1px 0 #E8D3EE, 1px -1px 0 #E8D3EE, -1px 1px 0 #E8D3EE, -1px -1px 0 #E8D3EE;
+    }
+
+
+.containerMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    object-fit: contain;
+    margin: auto;
+}
+
+.under_header {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.containerNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    vertical-align: bottom;
+    background-color: rgba(208, 202, 202, 0.7);
+    border: 5px solid #E1DCDC;
+    box-shadow: 0px 4px 10px 10px rgba(154, 145, 145, 0.25);
+    color: indianred;
+    object-fit: contain;
+    padding: 5px 0 5px 0;
+}
+
+.containerAboutPhoto {
+    display: flex;
+    height: 320px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-evenly;
+    background-size: contain;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.containerAbout {
+    height: 320px;
+    position: relative;
+    align-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 5px rgba(179, 162, 162, 0.4);
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 60%;
+}
+
+.containerSkills {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    background: rgba(234, 226, 226, 0.7);
+    box-shadow: 0px 4px 10px 10px rgba(219, 205, 205, 0.25);
+    width: 100%;
+    margin-top: 50px;
+    height:450px;
+}
+
+.containerQuotes {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.MyPhoto {
+    border-radius: 4px;
+    border: 6px solid #EEE2E2;
+    box-shadow: inset 0px 4px 10px 10px rgba(248, 243, 243, 0.7);
+}
+
+.photo_links {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 100%;
+}
+
+.all-links {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 5px auto 5px auto;
+    width: 100%;
+}
+
+.Child {
+    padding-left: 25px;
+}
+
+
+.blockquote-1 {
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 16px 16px 30px 16px;
+    padding: 16px 24px;
+    position: relative;
+    font-size: 16px;
+    background: #efefef;
+    color: #000;
+    font-style: italic;
+}
+
+    .blockquote-1::before {
+        border: 14px solid transparent;
+        border-top: 14px solid #efefef;
+        border-bottom: 0;
+        height: 0;
+        width: 0;
+        border-top-width: 25px;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 40px;
+        bottom: -25px;
+        transform-origin: center;
+        transform: rotate(90deg) skew(-25deg) translateY(17px);
+    }
+
+    .blockquote-1 cite {
+        position: absolute;
+        bottom: -24px;
+        left: 62px;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        color: #000;
+    }
