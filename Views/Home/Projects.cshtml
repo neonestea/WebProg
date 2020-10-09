@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+</head>
+<body>
+    <header>
+        <div class="under_header">
+            <div class="icon">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
+                <p class="icon_text">Нажми на меня!</p>
+            </div>
+            <div class="containerMe">
+                <h1>Анастасия Янкова</h1>
+                <h4>Типа программист (вроде как)</h4>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="left-main">
+            <nav class="container_nav">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Projects" class="is-active">Проекты</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Skills">Навыки</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Education">Образование</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Experience">Опыт</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="middle-main-flex">
+            <div class="card_line">
+                <a href="https://github.com/neonestea/JavaLabs" target="_blank" class="card">
+                    @*<div class="card">*@
+                        <img src="/images/java.png" class="card-image">
+                        <h5 class="card-title">Java</h5>
+                        <p class="card-text">Несколько проектов на Java, выполненных в течение обучения.</p>
+                    @*</div>*@
+                </a>
+                <a href="https://github.com/neonestea" target="_blank" class="card">
+                    <img src="/images/math.png" class="card-image">
+                    <h5 class="card-title">Математическая игра</h5>
+                    <p class="card-text">Игра для детей. Помогает улучшить навыки сложения и вычитания (1 уровень), а также умножения и деления (2 уровень).</p>
+                </a>
+            </div>        
+            <div class="card_line">
+                <a href="https://github.com/neonestea" target="_blank" class="card">
+                    <img src="/images/messenger.png" class="card-image">
+                    <h5 class="card-title">Мессенджер</h5>
+                    <p class="card-text">Сайт для обмена мгновенными сообщениями, как общими, так и приватными.</p>
+                </a>
+                <a href="https://localhost:44344/Home" target="_blank" class="card">
+                    <img src="/images/portfolio.png" class="card-image">
+                    <h5 class="card-title">Портфолио</h5>
+                    <p class="card-text">Портфолио, которое вы уже смотрите.</p>
+                </a>
+            </div>
+            
+        </div>
+        <div class="right-main">
+        </div>
+
+    </main>
+    <footer>
+        <p>+7 (817) 542-45-46</p>
+        <p>yankova.nastya@yandex.ru</p>
+    </footer>
+</body>
+</html>
+

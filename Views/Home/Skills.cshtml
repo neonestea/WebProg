@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+</head>
+<body>
+    <header>
+        <div class="under_header">
+            <div class="icon">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
+                <p class="icon_text">Нажми на меня!</p>
+            </div>
+            <div class="containerMe">
+                <h1>Анастасия Янкова</h1>
+                <h4>Типа программист (вроде как)</h4>
+            </div>
+        </div>
+
+    </header>
+    <main  style="padding-bottom: 20px;">
+        <div class="left-main">
+            <nav class="container_nav">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Projects">Проекты</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Skills" class="is-active">Навыки</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Education">Образование</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Experience">Опыт</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="middle-main-flex" style="padding-left: 10px;">
+            <p class="skill">HTML</p>
+            <div class="container">
+                <div class="skills html">90%</div>
+            </div>
+
+            <p class="skill">CSS</p>
+            <div class="container">
+                <div class="skills css">90%</div>
+            </div>
+
+            <p class="skill">JavaScript</p>
+            <div class="container">
+                <div class="skills js">15%</div>
+            </div>
+
+            <p class="skill">C</p>
+            <div class="container">
+                <div class="skills C1">20%</div>
+            </div>
+
+            <p class="skill">C++</p>
+            <div class="container">
+                <div class="skills C2">35%</div>
+            </div>
+
+            <p class="skill">C#</p>
+            <div class="container">
+                <div class="skills C3">90%</div>
+            </div>
+
+            <p class="skill">Java</p>
+            <div class="container">
+                <div class="skills java">70%</div>
+            </div>
+
+            <p class="skill">Математика</p>
+            <div class="container">
+                <div class="skills math">60%</div>
+            </div>
+
+            <p class="skill">Администрирование</p>
+            <div class="container">
+                <div class="skills adm">50%</div>
+            </div>
+        </div>
+        <div class="right-main">
+        </div>
+
+    </main>
+    <footer>
+        <p>+7 (817) 542-45-46</p>
+        <p>yankova.nastya@yandex.ru</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+</head>
+<body>
+    <header>
+        <div class="under_header">
+            <div class="icon">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
+                <p class="icon_text">Нажми на меня!</p>
+            </div>
+            <div class="containerMe">
+                <h1>Анастасия Янкова</h1>
+                <h4>Типа программист (вроде как)</h4>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="left-main">
+            <nav class="container_nav">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Projects">Проекты</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Skills">Навыки</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Education">Образование</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Experience" class="is-active">Опыт</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="middle-main">
+            <div class="timeline_block">
+                <div class="date">
+                    <p>2020</p>
+                </div>
+                <div class="experience">
+                    <h3 class="company">Университет ИТМО</h3>
+                    <h3 class="job-title">Должность:</h3>
+                    <p class="duties">нищий студент</p>
+                    <h3 class="job-title">Должностные обязанности:</h3>
+                    <ul class="duties">
+                        <li>учиться</li>
+                        <li>выживать</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_block">
+                <div class="date">
+                    <p>2018</p>
+                </div>
+                <div class="experience">
+                    <h3 class="company">Дома у мамы</h3>
+                    <h3 class="job-title">Должность:</h3>
+                    <p class="duties">дочь</p>
+                    <h3 class="job-title">Должностные обязанности:</h3>
+                    <ul class="duties">
+                        <li>есть</li>
+                        <li>спать</li>
+                        <li>убираться</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-main">
+        </div>
+
+    </main>
+    <footer>
+        <p>+7 (817) 542-45-46</p>
+        <p>yankova.nastya@yandex.ru</p>
+    </footer>
+</body>
+</html>
