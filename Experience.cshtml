@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Projects" class="is-active">
+                        <a asp-area="" asp-controller="Home" asp-action="Projects">
                             <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
                             <span>Проекты</span>
                         </a>
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Experience">
+                        <a asp-area="" asp-controller="Home" asp-action="Experience" class="is-active">
                             <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
                             <span>Опыт</span>
                         </a>
@@ -71,32 +71,53 @@
                 </ul>
             </nav>
         </div>
-        <div class="middle-main-flex">
-            <div class="card_line">
-                <a href="https://github.com/neonestea/JavaLabs" target="_blank" class="card">
-                    @*<div class="card">*@
-                    <img src="/images/java.png" class="card-image">
-                    <h5 class="card-title">Java</h5>
-                    <p class="card-text">Несколько проектов на Java, выполненных в течение обучения.</p>
-                    @*</div>*@
-                </a>
-                <a href="https://github.com/neonestea/Math-Game" target="_blank" class="card">
-                    <img src="/images/math.png" class="card-image">
-                    <h5 class="card-title">Математическая игра</h5>
-                    <p class="card-text">Игра для детей. Помогает улучшить навыки сложения и вычитания (1 уровень), а также умножения и деления (2 уровень).</p>
-                </a>
-            </div>
-            <div class="card_line">
-                <a href="https://github.com/neonestea" target="_blank" class="card"">
-                    <img src="/images/messenger.png" class="card-image">
-                    <h5 class="card-title">Мессенджер</h5>
-                    <p class="card-text">Сайт для обмена мгновенными сообщениями, как общими, так и приватными.</p>
-                </a>
-                <a href="https://localhost:44344/Home" target="_blank" class="card"">
-                    <img src="/images/portfolio.png" class="card-image">
-                    <h5 class="card-title">Портфолио</h5>
-                    <p class="card-text">Портфолио, которое вы уже смотрите.</p>
-                </a>
+        <div class="middle-main">
+            @*<label class="year_label" for="SearchString">После (год):</label>
+        <input class="form-control" id="DateString1" type="text" name="DateString1" autocomplete="off">
+        <label class="year_label" for="SearchString">До (год):</label>
+        <input class="form-control" id="DateString2" type="text" name="DateString2" autocomplete="off">
+        <input class="blubtn" type="submit" value="Поиск" />*@
+            <select id="radio" style="margin-top: 10px; margin-left: 10px;">
+                <option value="">Сбросить</option>
+                <option value="timeline_block">Все</option>
+                <option value="date2020">2020</option>
+                <option value="date2018">2018</option>
+            </select>
+
+            <button class="check checked" style="margin-top: 10px; margin-left: 10px;" value="date2020">2020</button>
+            <button class="check checked" style="margin-top: 10px; margin-left: 10px;" value="date2018">2018</button>
+            <div id="exp">
+                <div class="timeline_block date2020" style="margin-top: 12px;">
+                    <div class="date">
+                        <p>2020</p>
+                    </div>
+                    <div class="experience">
+                        <h3 class="company">Университет ИТМО</h3>
+                        <h3 class="job-title">Должность:</h3>
+                        <p class="duties">нищий студент</p>
+                        <h3 class="job-title">Должностные обязанности:</h3>
+                        <ul class="duties">
+                            <li>учиться</li>
+                            <li>выживать</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline_block date2018">
+                    <div class="date">
+                        <p>2018</p>
+                    </div>
+                    <div class="experience">
+                        <h3 class="company">Дома у мамы</h3>
+                        <h3 class="job-title">Должность:</h3>
+                        <p class="duties">дочь</p>
+                        <h3 class="job-title">Должностные обязанности:</h3>
+                        <ul class="duties">
+                            <li>есть</li>
+                            <li>спать</li>
+                            <li>убираться</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -108,7 +129,6 @@
         <p class="footer-text">+7 (817) 542-45-46</p>
         <a href="mailto:yankova.nastya@yandex.ru" class="footer-text" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
     </footer>
-    <script src="~/css/proj.js"></script>
+    <script src="~/css/exp.js"></script>
 </body>
 </html>
-

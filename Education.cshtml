@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Projects" class="is-active">
+                        <a asp-area="" asp-controller="Home" asp-action="Projects">
                             <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
                             <span>Проекты</span>
                         </a>
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Education">
+                        <a asp-area="" asp-controller="Home" asp-action="Education" class="is-active">
                             <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
                             <span>Образование</span>
                         </a>
@@ -72,33 +72,57 @@
             </nav>
         </div>
         <div class="middle-main-flex">
-            <div class="card_line">
-                <a href="https://github.com/neonestea/JavaLabs" target="_blank" class="card">
-                    @*<div class="card">*@
-                    <img src="/images/java.png" class="card-image">
-                    <h5 class="card-title">Java</h5>
-                    <p class="card-text">Несколько проектов на Java, выполненных в течение обучения.</p>
-                    @*</div>*@
-                </a>
-                <a href="https://github.com/neonestea/Math-Game" target="_blank" class="card">
-                    <img src="/images/math.png" class="card-image">
-                    <h5 class="card-title">Математическая игра</h5>
-                    <p class="card-text">Игра для детей. Помогает улучшить навыки сложения и вычитания (1 уровень), а также умножения и деления (2 уровень).</p>
-                </a>
-            </div>
-            <div class="card_line">
-                <a href="https://github.com/neonestea" target="_blank" class="card"">
-                    <img src="/images/messenger.png" class="card-image">
-                    <h5 class="card-title">Мессенджер</h5>
-                    <p class="card-text">Сайт для обмена мгновенными сообщениями, как общими, так и приватными.</p>
-                </a>
-                <a href="https://localhost:44344/Home" target="_blank" class="card"">
-                    <img src="/images/portfolio.png" class="card-image">
-                    <h5 class="card-title">Портфолио</h5>
-                    <p class="card-text">Портфолио, которое вы уже смотрите.</p>
-                </a>
-            </div>
+            <div class="buttons" style="display: inline-block;">
+                <select id="radio" style="margin-top: 10px; margin-left: 10px;">
+                    <option value="">Сбросить</option>
+                    <option value="education_card">Все</option>
+                    <option value="prof">Среднее</option>
+                    <option value="higher">Высшее</option>
+                </select>
 
+                <button class="check checked" style="margin-top: 10px; margin-left: 10px;" value="prof">Среднее</button>
+                <button class="check checked" style="margin-top: 10px; margin-left: 10px;" value="higher">Высшее</button>
+            </div>
+            
+            <div id="edu">
+                <div class="education_card prof">
+                    <h5 class="education-title">Колледж МИД РФ</h5>
+                    <h5 class="education-years">2016 &mdash; 2018</h5>
+                    <h5 class="educaion_subjects">Направление подготовки</h5>
+                    <p class="education-text">
+                        специалист документационного обеспечения управления и архивоведения
+                    </p>
+                    <h5 class="educaion_subjects">Основные предметы</h5>
+                    <ol class="education-text">
+                        <li>Документационное обеспечение управления</li>
+                        <li>Работа с электроннами системами документации</li>
+                        <li>Английский язык</li>
+                        <li>Стенография</li>
+                    </ol>
+                </div>
+                <div class="education_card higher">
+                    <h5 class="education-title">Университет ИТМО</h5>
+                    <h5 class="education-years">2018 &mdash; 2022</h5>
+                    <h5 class="educaion_subjects">Направление подготовки</h5>
+                    <p class="education-text">
+                        интернет-технологии и программирование
+                    </p>
+                    <h5 class="educaion_subjects">Основные предметы</h5>
+                    <ol class="education-text">
+                        <li>Программирование</li>
+                        <li>
+                            <dl>
+                                <dt>Администрирование</dt>
+                                <dd>Windows Server</dd>
+                                <dd>Linux</dd>
+                            </dl>
+                        </li>
+                        <li>Английский язык</li>
+                        <li>Математика</li>
+                    </ol>
+                </div>
+            </div>
+            
         </div>
         <div class="right-main">
         </div>
@@ -108,7 +132,6 @@
         <p class="footer-text">+7 (817) 542-45-46</p>
         <a href="mailto:yankova.nastya@yandex.ru" class="footer-text" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
     </footer>
-    <script src="~/css/proj.js"></script>
+    <script src="~/css/edu.js"></script>
 </body>
 </html>
-
