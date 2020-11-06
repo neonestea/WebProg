@@ -29,41 +29,41 @@
 
     </header>
     <main>
-        <div class="left-main">
-            <nav class="container_nav">
+        <div style="width: 210px;">
+            <nav class="container_nav" style="width: 250px;">
                 <ul>
-                    <li class="view">
+                    <li class="view" style="width: 210px;">
                         <a asp-area="" asp-controller="Home" asp-action="Index">
                             <span><img src="/images/home.png" alt="Home" class="nav_icon"></span>
                             <span>Главная</span>
                         </a>
                     </li>
-                    <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Projects" class="is-active">
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Projects">
                             <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
                             <span>Проекты</span>
                         </a>
                     </li>
-                    <li class="view">
+                    <li class="view" style="width: 210px;">
                         <a asp-area="" asp-controller="Home" asp-action="Skills">
                             <span><img src="/images/skills.png" alt="Skills" class="nav_icon"></span>
                             <span>Навыки</span>
                         </a>
                     </li>
-                    <li class="view">
+                    <li class="view" style="width: 210px;">
                         <a asp-area="" asp-controller="Home" asp-action="Education">
                             <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
                             <span>Образование</span>
                         </a>
                     </li>
-                    <li class="view">
+                    <li class="view" style="width: 210px;">
                         <a asp-area="" asp-controller="Home" asp-action="Experience">
                             <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
                             <span>Опыт</span>
                         </a>
                     </li>
-                    <li class="view">
-                        <a asp-area="" asp-controller="Home" asp-action="Text">
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Text" class="is-active">
                             <span><img src="/images/smile2.png" alt="Experience" class="nav_icon"></span>
                             <span>Смайлики</span>
                         </a>
@@ -71,36 +71,15 @@
                 </ul>
             </nav>
         </div>
-        <div class="middle-main-flex">
-            <div class="card_line">
-                <a href="https://github.com/neonestea/JavaLabs" target="_blank" class="card">
-                    @*<div class="card">*@
-                    <img src="/images/java.png" class="card-image">
-                    <h5 class="card-title">Java</h5>
-                    <p class="card-text">Несколько проектов на Java, выполненных в течение обучения.</p>
-                    @*</div>*@
-                </a>
-                <a href="https://github.com/neonestea/Math-Game" target="_blank" class="card">
-                    <img src="/images/math.png" class="card-image">
-                    <h5 class="card-title">Математическая игра</h5>
-                    <p class="card-text">Игра для детей. Помогает улучшить навыки сложения и вычитания (1 уровень), а также умножения и деления (2 уровень).</p>
-                </a>
-            </div>
-            <div class="card_line">
-                <a href="https://github.com/neonestea" target="_blank" class="card"">
-                    <img src="/images/messenger.png" class="card-image">
-                    <h5 class="card-title">Мессенджер</h5>
-                    <p class="card-text">Сайт для обмена мгновенными сообщениями, как общими, так и приватными.</p>
-                </a>
-                <a href="https://localhost:44344/Home" target="_blank" class="card"">
-                    <img src="/images/portfolio.png" class="card-image">
-                    <h5 class="card-title">Портфолио</h5>
-                    <p class="card-text">Портфолио, которое вы уже смотрите.</p>
-                </a>
-            </div>
+        <div style="margin-left: 100px; margin-top: 30px; margin-bottom: 30px;">
+            <img src="~/images/smile.jpg" style="float:right" width="35" height="35" alt="Smile">
+            <p>Смайлики уже долгое время используются для добавления эмоций тексту или для придания красочности и эмоциональности.</p>
+            <p>И это хорошо!</p>
+            <img src="~/images/smile2.png" style="float:left" width="35" height="35" alt="Smile">
+            <p>Для примера даны смайлики.</p>
+            <img src="~/images/sheep.png" style="float:right" width="35" height="35" alt="Smile">
+            <p style="display: inline; width: 100px;">Еще есть овечка!</p>
 
-        </div>
-        <div class="right-main">
         </div>
 
     </main>
@@ -108,7 +87,6 @@
         <p class="footer-text">+7 (817) 542-45-46</p>
         <a href="mailto:yankova.nastya@yandex.ru" class="footer-text" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
     </footer>
-    <script src="~/css/proj.js"></script>
+
 </body>
 </html>
-
