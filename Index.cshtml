@@ -13,130 +13,191 @@
     <link rel="icon" href="/images/favicon.ico">
     <meta name="keywords" content="Портфолио, обо мне, контакты" />
     <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
 </head>
 <body>
-        <header>
-            <div class="under_header">
-                <div class="icon">
-                    <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
-                    <p class="icon_text">Нажми на меня!</p>
-                </div>
-                <div class="containerMe">
-                    <h1>Анастасия Янкова</h1>
-                    <h4>Типа программист (вроде как)</h4>
-                </div>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+    <div class="conts" id="conts">
+        <span class="close" onClick="hideContacts();"></span>
+        <h2 style="margin-left: 125px;">Контакты</h2>
+        <ul class="contacts">
+
+            <li class="con">Телефон</li>
+            <li class="con">+7 (917) 542-45-46</li>
+            <li class="con" style="margin-top:5px;">ВКонтакте</li>
+            <li class="con"><a href="https://vk.com/neo_nestea" target="_blank">neo_nestea</a></li>
+            <li class="con" style="margin-top:5px;">Почта</li>
+            <li class="con" style="margin-left: 0;"><a href="mailto:yankova.nastya@yandex.ru" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a></li>
+        </ul>
+    </div>
+    <header>
+        <div class="under_header">
+            <div class="icon">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%86%D0%B0" target="_blank"><img src="/images/sheep.png" width="50" height="50" alt="Logo"></a>
+                <p class="icon_text">Нажми на меня!</p>
             </div>
-            
-        </header>
-        <main>
-            <div class="left-main">
-                <nav class="container_nav">
-                    <ul>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Index" class="is-active">
-                                <span><img src="/images/home.png" alt="Home" class="nav_icon"></span>
-                                <span>Главная</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Projects">
-                                <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
-                                <span>Проекты</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Skills">
-                                <span><img src="/images/skills.png" alt="Skills" class="nav_icon"></span>
-                                <span>Навыки</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Education">
-                                <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
-                                <span>Образование</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Experience">
-                                <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
-                                <span>Опыт</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Text">
-                                <span><img src="/images/smile2.png" alt="Experience" class="nav_icon"></span>
-                                <span>Смайлики</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="containerMe">
+                <h1>Анастасия Янкова</h1>
+                <h4>Типа программист (вроде как)</h4>
             </div>
-            <div class="middle-main-flex">
-                <div class="container_about_photo">
-                    <div class="container_about">
-                        <h2>Обо мне</h2>
-                        <p>
-                            Я - живое доказательство того, что программирование не только для умных.
-                            Люблю котиков, skittles и масю. Надеюсь, это никто не будет читать.
-                            Последние пару лет занимаюсь программированием. В основном, потому что
-                            заставляют в универе. А еще я перевелась на бюджет. Порадуйтесь за меня.
-                        </p>
+        </div>
+
+    </header>
+
+    <main id="hide">
+
+        <div class="left-main">
+            <nav class="container_nav">
+                <ul>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="is-active">
+                            <span><img src="/images/home.png" alt="Home" class="nav_icon"></span>
+                            <span>Главная</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Projects">
+                            <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
+                            <span>Проекты</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Skills">
+                            <span><img src="/images/skills.png" alt="Skills" class="nav_icon"></span>
+                            <span>Навыки</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Education">
+                            <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
+                            <span>Образование</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Experience">
+                            <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
+                            <span>Опыт</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a>
+                            <span><img src="/images/cont.jpg" alt="Contacts" class="nav_icon"></span>
+                            <span id="conts" onClick="showContacts();" style="cursor: pointer;">Контакты</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Gallery">
+                            <span><img src="/images/gallery.jpg" alt="Gallery" class="nav_icon"></span>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Text">
+                            <span><img src="/images/smile2.png" alt="Smile" class="nav_icon"></span>
+                            <span>Смайлики</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="middle-main-flex">
+
+            <div class="container_about_photo">
+                <div class="container_about">
+                    <h2>Обо мне</h2>
+                    <p>
+                        Я - живое доказательство того, что программирование не только для умных.
+                        Люблю котиков, skittles и масю. Надеюсь, это никто не будет читать.
+                        Последние пару лет занимаюсь программированием. В основном, потому что
+                        заставляют в универе. А еще я перевелась на бюджет. Порадуйтесь за меня.
+                    </p>
+                </div>
+                <div class="photo_links">
+
+
+                    <img class="MyPhoto" id="ava" src="/images/lama2.jpg" width="230" height="300" alt="LamaPhoto">
+                    <div class="arrows">
+                        <div id="leftArrow" class="arrow arrow-left" title="Предыдущая" onClick="imgMinus();"></div>
+                        <div id="rightArrow" class="arrow arrow-right" title="Следующая" onClick="imgPlus();"></div>
                     </div>
-                    <div class="photo_links">
-                        <img class="MyPhoto" src="/images/lama2.jpg" width="230" height="300" alt="LamaPhoto">
-                        <div class="all-links">
-                            <div class="link" title="Нажмите, чтобы открыть">
-                                <a href="https://vk.com/neo_nestea" target="_blank"><img src="/images/vk.png" width="35" height="35" alt="VK-Logo"></a>
-                            </div>
-                            <div class="link" title="Нажмите, чтобы открыть">
-                                <a href="https://www.facebook.com/profile.php?id=100005641655247" target="_blank"><img src="/images/facebook.png" width="35" height="35" alt="Facebook-Logo"></a>
-                            </div>
-                            <div class="link" title="Нажмите, чтобы открыть">
-                                <a href="https://www.instagram.com/neo_nestea/?hl=ru" target="_blank"><img src="/images/insta.png" width="35" height="35" alt="Insta-Logo"></a>
-                            </div>
+                    <div class="all-links">
+                        <div class="link" title="Нажмите, чтобы открыть">
+                            <a href="https://vk.com/neo_nestea" target="_blank"><img src="/images/vk.png" width="35" height="35" alt="VK-Logo"></a>
+                        </div>
+                        <div class="link" title="Нажмите, чтобы открыть">
+                            <a href="https://www.facebook.com/profile.php?id=100005641655247" target="_blank"><img src="/images/facebook.png" width="35" height="35" alt="Facebook-Logo"></a>
+                        </div>
+                        <div class="link" title="Нажмите, чтобы открыть">
+                            <a href="https://www.instagram.com/neo_nestea/?hl=ru" target="_blank"><img src="/images/insta.png" width="35" height="35" alt="Insta-Logo"></a>
                         </div>
                     </div>
                 </div>
-
-
-                <aside class="container_sheep">
-                    <pre>
-             ▕▔╲▅╱▔▏
-          ╱▔▔▔▔▔▔▔▔╲
-         ▏╱▔▔▔▔▔▔▔╲▕
-        ╱▔ ▏▕▍   ▕▍▕ ▔╲
-        ▏╱▏▏   ╰┳╯   ▕▕╲▕
-        ▔  ╲╲   ╰━┻━╯ ╱╱ ▔
-             ▔▏    ▕▔</pre>
-                    <p class="sheep_text">Я овечка, милое животное.</p>
-                </aside>
-
-                <article class="containerQuotes">
-                    <blockquote class="blockquote-1">
-                        <p>
-                            Не волнуйтесь, если что-то <em>не работает</em>.
-                            Если бы всё работало, вас бы <strong>уволили</strong>.
-                        </p>
-                        <cite>Mosher’s Law of Software Engineering</cite>
-                    </blockquote>
-                </article>
-               
             </div>
-            <div class="right-main">
-                <div id="time"></div>
-                @*<div>
-                <aside>Не пробуй лить H<sub>2</sub>O на комп!!! Это может закончиться очень печально...</aside>
-            </div>*@
+
+
+            @*<aside class="container_sheep">
+                            <pre>
+                     ▕▔╲▅╱▔▏
+                  ╱▔▔▔▔▔▔▔▔╲
+                 ▏╱▔▔▔▔▔▔▔╲▕
+                ╱▔ ▏▕▍   ▕▍▕ ▔╲
+                ▏╱▏▏   ╰┳╯   ▕▕╲▕
+                ▔  ╲╲   ╰━┻━╯ ╱╱ ▔
+                     ▔▏    ▕▔</pre>
+                            <p class="sheep_text">Я овечка, милое животное.</p>
+                        </aside>*@
+            <div class="card chat" id="drag">
+                <div class="chatWindow" id="chat"></div>
+                <div class="sendField">
+                    <input id="text" maxlength="100" size="32" class="in_text">
+                    @*<textarea name="comment"></textarea>*@
+                    <button id="btn" class="button9">Отправить</button>
+                    <button id="btn2" class="button9">Посчитать</button>
+                </div>
+                
             </div>
-            
+            <article class="containerQuotes">
+                <blockquote class="blockquote-1">
+                    <p>
+                        Не волнуйтесь, если что-то <em>не работает</em>.
+                        Если бы всё работало, вас бы <strong>уволили</strong>.
+                    </p>
+                    <cite>Mosher’s Law of Software Engineering</cite>
+                </blockquote>
+            </article>
 
-            
+        </div>
 
-        </main>
-        <footer>
-            <p class="footer-text">+7 (817) 542-45-46</p>
-            <a href="mailto:yankova.nastya@yandex.ru" class="footer-text" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
-        </footer>
-    <script src="~/css/time.js"></script>
+        <div class="right-main">
+            <div id="time"></div>
+
+            @*<div>
+                    <aside>Не пробуй лить H<sub>2</sub>O на комп!!! Это может закончиться очень печально...</aside>
+                </div>*@
+        </div>
+    </main>
+
+
+    <footer>
+        <p class="footer-text">+7 (817) 542-45-46</p>
+        <a href="mailto:yankova.nastya@yandex.ru" class="footer-text" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
+    </footer>
+    <script src="~/js/time.js"></script>
 </body>
+
 </html>
