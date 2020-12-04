@@ -13,9 +13,26 @@
     <link rel="icon" href="/images/favicon.ico">
     <meta name="keywords" content="Портфолио, обо мне, контакты" />
     <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
 </head>
 <body>
-
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <div class="photo" id="photo">
+        <img id="fullPhoto" src="/images/photo12.jpg" alt="Photo" onClick="hidePhoto();" onload="onloadImage();">
+    </div>
     <header>
         <div class="under_header">
             <div class="icon">
@@ -30,6 +47,7 @@
 
     </header>
     <main>
+
         <div class="left-main">
             <nav class="container_nav">
                 <ul>
@@ -80,26 +98,30 @@
         </div>
         <div class="middle-main">
             <div class="photoContainer">
-                <img id="photos" src="/images/photo1.jpg" width="600" height="450" alt="Photo">
+                <div class="loader"></div>
 
-                    <div class="circles">
-                        <div class="radio">
+                <img id="photos" src="/images/photo12.jpg" style="visibility:hidden" width="600" height="450"
+                     alt="Photo" onClick="showPhoto();"
+                     onload="this.style.visibility='visible';">
 
-                            <input id="btn1" type="radio" class="mybtn">
-                            <label for="btn1"></label>
-                            <input id="btn2" type="radio" class="mybtn">
-                            <label for="btn2"></label>
-                            <input id="btn3" type="radio" class="mybtn">
-                            <label for="btn3"></label>
-                            <input id="btn4" type="radio" class="mybtn">
-                            <label for="btn4"></label>
-                            <input id="btn5" type="radio" class="mybtn">
-                            <label for="btn5"></label>
+                <div class="circles">
+                    <div class="radio">
 
-                        </div>
+                        <input id="btn1" type="radio" class="mybtn">
+                        <label for="btn1"></label>
+                        <input id="btn2" type="radio" class="mybtn">
+                        <label for="btn2"></label>
+                        <input id="btn3" type="radio" class="mybtn">
+                        <label for="btn3"></label>
+                        <input id="btn4" type="radio" class="mybtn">
+                        <label for="btn4"></label>
+                        <input id="btn5" type="radio" class="mybtn">
+                        <label for="btn5"></label>
+
                     </div>
                 </div>
             </div>
+        </div>
 
         <div class="right-main">
         </div>

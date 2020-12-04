@@ -13,8 +13,23 @@
     <link rel="icon" href="/images/favicon.ico">
     <meta name="keywords" content="Портфолио, обо мне, контакты" />
     <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
 
     <header>
         <div class="under_header">
