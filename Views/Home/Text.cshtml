@@ -13,8 +13,23 @@
     <link rel="icon" href="/images/favicon.ico">
     <meta name="keywords" content="Портфолио, обо мне, контакты" />
     <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <header>
         <div class="under_header">
             <div class="icon">
@@ -29,68 +44,68 @@
 
     </header>
 
-        <main>
+    <main>
 
-            <div style="width: 210px;">
-                <nav class="container_nav" style="width: 250px;">
-                    <ul>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Index">
-                                <span><img src="/images/home.png" alt="Home" class="nav_icon"></span>
-                                <span>Главная</span>
-                            </a>
-                        </li>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Projects">
-                                <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
-                                <span>Проекты</span>
-                            </a>
-                        </li>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Skills">
-                                <span><img src="/images/skills.png" alt="Skills" class="nav_icon"></span>
-                                <span>Навыки</span>
-                            </a>
-                        </li>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Education">
-                                <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
-                                <span>Образование</span>
-                            </a>
-                        </li>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Experience">
-                                <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
-                                <span>Опыт</span>
-                            </a>
-                        </li>
-                        <li class="view">
-                            <a asp-area="" asp-controller="Home" asp-action="Gallery">
-                                <span><img src="/images/gallery.jpg" alt="Gallery" class="nav_icon"></span>
-                                <span>Галерея</span>
-                            </a>
-                        </li>
-                        <li class="view" style="width: 210px;">
-                            <a asp-area="" asp-controller="Home" asp-action="Text" class="is-active">
-                                <span><img src="/images/smile2.png" alt="Experience" class="nav_icon"></span>
-                                <span>Смайлики</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div style="margin-left: 100px; margin-top: 30px; margin-bottom: 30px;">
-                <img src="~/images/smile.jpg" style="float:right" width="35" height="35" alt="Smile">
-                <p>Смайлики уже долгое время используются для добавления эмоций тексту или для придания красочности и эмоциональности.</p>
-                <p>И это хорошо!</p>
-                <img src="~/images/smile2.png" style="float:left" width="35" height="35" alt="Smile">
-                <p>Для примера даны смайлики.</p>
-                <img src="~/images/sheep.png" style="float:right" width="35" height="35" alt="Smile">
-                <p style="display: inline; width: 100px;">Еще есть овечка!</p>
+        <div style="width: 210px;">
+            <nav class="container_nav" style="width: 250px;">
+                <ul>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <span><img src="/images/home.png" alt="Home" class="nav_icon"></span>
+                            <span>Главная</span>
+                        </a>
+                    </li>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Projects">
+                            <span><img src="/images/projects.png" alt="Projects" class="nav_icon"></span>
+                            <span>Проекты</span>
+                        </a>
+                    </li>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Skills">
+                            <span><img src="/images/skills.png" alt="Skills" class="nav_icon"></span>
+                            <span>Навыки</span>
+                        </a>
+                    </li>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Education">
+                            <span><img src="/images/education.png" alt="Education" class="nav_icon"></span>
+                            <span>Образование</span>
+                        </a>
+                    </li>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Experience">
+                            <span><img src="/images/experience.png" alt="Experience" class="nav_icon"></span>
+                            <span>Опыт</span>
+                        </a>
+                    </li>
+                    <li class="view">
+                        <a asp-area="" asp-controller="Home" asp-action="Gallery">
+                            <span><img src="/images/gallery.jpg" alt="Gallery" class="nav_icon"></span>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="view" style="width: 210px;">
+                        <a asp-area="" asp-controller="Home" asp-action="Text" class="is-active">
+                            <span><img src="/images/smile2.png" alt="Experience" class="nav_icon"></span>
+                            <span>Смайлики</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div style="margin-left: 100px; margin-top: 30px; margin-bottom: 30px;">
+            <img src="~/images/smile.jpg" style="float:right" width="35" height="35" alt="Smile">
+            <p>Смайлики уже долгое время используются для добавления эмоций тексту или для придания красочности и эмоциональности.</p>
+            <p>И это хорошо!</p>
+            <img src="~/images/smile2.png" style="float:left" width="35" height="35" alt="Smile">
+            <p>Для примера даны смайлики.</p>
+            <img src="~/images/sheep.png" style="float:right" width="35" height="35" alt="Smile">
+            <p style="display: inline; width: 100px;">Еще есть овечка!</p>
 
-            </div>
+        </div>
 
-        </main>
+    </main>
 
 
     <footer>
