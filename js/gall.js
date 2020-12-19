@@ -1,4 +1,12 @@
 ﻿const imgLinks = [
+    '/images/photo12.jpg',
+    '/images/photo22.jpg',
+    '/images/photo32.jpg',
+    '/images/photo42.jpg',
+    '/images/photo52.jpg'
+];
+
+const fullImgLinks = [
     '/images/photo1.jpg',
     '/images/photo2.jpg',
     '/images/photo3.jpg',
@@ -6,13 +14,15 @@
     '/images/photo5.jpg'
 ];
 
-var a = document.getElementById('btn1');
-var b = document.getElementById('btn2');
-var c = document.getElementById('btn3');
-var d = document.getElementById('btn4');
-var e = document.getElementById('btn5');
+const a = document.getElementById('btn1');
+const b = document.getElementById('btn2');
+const c = document.getElementById('btn3');
+const d = document.getElementById('btn4');
+const e = document.getElementById('btn5');
+
 a.style = "background-color: #b3d7ff; border - color: #b3d7ff;"
 a.checked = true;
+let currentIndex = 0;
 
 a.onchange = function () {
     if (b.checked | c.checked | d.checked | e.checked ) {
@@ -77,4 +87,25 @@ e.onchange = function () {
     document.getElementById('photos').src = imgLinks[4];
     currentIndex = 4;
     return false;
+}
+
+const photoBlock = document.getElementById("photo");
+
+const main = document.querySelector('main');
+
+
+function showPhoto() {
+    document.getElementById('fullPhoto').src = imgLinks[currentIndex];
+    photoBlock.style.visibility = 'visible';
+    main.style.filter = 'blur(10px)';
+    document.body.style.overflow = 'hidden';
+
+
+}
+
+function hidePhoto() {
+    photoBlock.style.visibility = 'hidden';
+    main.style.filter = 'blur(0px)';
+    document.body.style.overflow = 'auto';
+
 }

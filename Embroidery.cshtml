@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header class="header2">
+        <div class="under_header" style="height: 400px;">
+            <div class="navigation">
+                <a asp-area="" asp-controller="Home" asp-action="Embroidery" class="nav_item_active">Главная</a>
+                <a asp-area="" asp-controller="Home" asp-action="History" class="nav_item">История</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contacts" class="nav_item">Контакты</a>
+            </div>
+            <div class="containerMe" style="height: 230px;">
+                <h1 style="margin-top: 100px;">Вышивка</h1>
+                <h4>Больше, чем жизнь</h4>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div style="width: 100%;">
+            <div style="display: flex; flex-direction: column; justify-items: center;">
+                <img id="ava" src="~/images/autumn.jpg" alt="work" class="work" margin-top: 50px;" />
+                <p id="price" style="font-size: 24px; margin: auto; margin-top: 20px;">6500 р.</p>
+                <h3 id="name" style="font-size: 24px; margin: auto; margin-bottom: 10px; margin-top: 20px;">Осенний венок</h3>
+                <div class="arrows">
+                    <div id="leftArrow" class="arrow arrow-left" title="Предыдущая" onClick="imgMinus();"></div>
+                    <div id="rightArrow" class="arrow arrow-right" title="Следующая" onClick="imgPlus();"></div>
+                </div>
+            </div>
+            <div style="width: 80%; display:flex; justify-content:space-between; margin: auto; font-size: 24px;">
+                <div class="container_about" style="width: 40%;">
+                    <h3 style="margin: auto; margin-top: 0;">Акции</h3>
+                    <p>Вторая картина за 60% (для картины меньшей стоимости)</p>
+                </div>
+                <div class="container_about" style="width: 40%;">
+                    <h3 style="margin: auto;">Новые поступления</h3>
+                    <ul>
+                        <li>Такса</li>
+                        <li>Пионы</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="comms" class="comments">
+                <h3 style="margin: auto; font-size: 24px; margin-top: 30px; margin-bottom: 20px;">Отзывы</h3>
+                <input placeholder="Введите отзыв" id="text" maxlength="500" size="50" class="in_text" autocomplete="off" style="margin-bottom: 15px; height: 25px;" />
+                <button id="btn" class="button9" style="margin: auto; margin-bottom: 20px;" disabled>Отправить</button>
+            </div>
+        </div>
+        <a class="back_to_top" title="Наверх">&uarr;</a>
+    </main>
+    <script src="~/js/emb.js"></script>
+</body>
+</html>

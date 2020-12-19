@@ -1,0 +1,97 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header class="header2">
+        <div class="under_header">
+            <div class="navigation">
+                <a asp-area="" asp-controller="Home" asp-action="Embroidery" class="nav_item">Главная</a>
+                <a asp-area="" asp-controller="Home" asp-action="History" class="nav_item_active">История</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contacts" class="nav_item">Контакты</a>
+            </div>
+            <div class="containerMe">
+                <h1 style="margin-top: 100px;">Вышивка</h1>
+                <h4>Больше, чем жизнь</h4>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <img src="/images/hist.jpg" alt="History" style="float:right; height: 400px; margin-top: 150px; margin-right: 220px;">
+            <div class="history" style="margin-left:220px;">
+                <h3>Ушла в прошлое?</h3>
+                <p>
+                    Для многих до сих пор жив стереотип, что вышивка - это нечно устаревшее и немодное, на что не стоит тратить время, силы и деньги.
+                    А, между прочим, в последнее время вышивка переживает очень сильный подъем. В соцсетях работает огромное количество дизайнеров схем
+                    для вышивки, которые предлагают вышивать не только банальные натюрморты, но и любимых персонажей книг и фильмов, реалистичные
+                    пейзажи многое другое.
+                </p>
+            </div>
+            <img src="/images/hist3.jpg" alt="History" style="float:left; height: 400px; margin-top: 250px; margin-left: 220px; margin-right: 90px;">
+            <div class="history" style="margin-right:220px; display: flex; flex-direction: column; justify-items: end; margin-left: 40px; margin-bottom: 100px;">
+                <h3>Вышивка против стресса</h3>
+                <p>
+                    В современном мире каждый из нас подвержен стрессу. Стрессы преследуют нас повсюду: на работе, дома, на улице.
+                    Некоторые рукодельницы говорят об ощущении спокойствия, умиротворенности, счастья, которое им дарит вышивка. Вышивка позволяет проявить свои творческие способности, поделиться эмоциями и переживаниями в компании единомышленников.
+                    За вышивкой мы забываем о своих проблемах и тревогах.
+                </p>
+            </div>
+            <img src="/images/hist2.jpg" alt="History" style="float:right; height: 350px; margin-right: 220px; margin-bottom: 50px;">
+            <div class="history" style="margin-left:220px; margin-bottom: 200px;">
+                <h3 style="margin-top:60px;">Самовыражение</h3>
+                <p>В наше время люди занимаются вышивкой не из необходимости, а по велению души. Вышивание дарит нам радость, это не пустое времяпрепровождение, корни этого увлечения уходят далеко вглубь личности человека.</p>
+            </div>
+
+            <div style="margin-left: 220px; font-size: 24px; padding-bottom: 30px;">
+                <h3>Почему я?</h3>
+                <ul style="list-style-type:none; margin-bottom: 30px;">
+                    <li>
+                        <span><img src="/images/love.png" alt="Goals" class="nav_icon"></span>
+                        <span>Сделано с любовью</span>
+                    </li>
+                    <li>
+                        <span><img src="/images/visual.png" alt="Goals" class="nav_icon"></span>
+                        <span>Художественное оформление</span>
+                    </li>
+                    <li>
+                        <span><img src="/images/quality.png" alt="Goals" class="nav_icon"></span>
+                        <span>Высокое качество</span>
+                    </li>
+                    <li>
+                        <span><img src="/images/goal.png" alt="Goals" class="nav_icon"></span>
+                        <span>Моя цель  &mdash; ваше удовольствие</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/site.css"
+          rel="stylesheet" />
+    <title>Янкова А.А. М33091</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Портфолио, обо мне, контакты" />
+    <meta name="description" content="Мое портфолию" />
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header class="header2">
+        <div class="under_header">
+            <div class="navigation">
+                <a asp-area="" asp-controller="Home" asp-action="Embroidery" class="nav_item">Главная</a>
+                <a asp-area="" asp-controller="Home" asp-action="History" class="nav_item">История</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contacts" class="nav_item_active">Контакты</a>
+            </div>
+            <div class="containerMe">
+                <h1 style="margin-top: 100px;">Вышивка</h1>
+                <h4>Больше, чем жизнь</h4>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div style="margin-left: 150px;">
+            <h3>Почта</h3>
+            <a href="mailto:yankova.nastya@yandex.ru" title="Нажмите, чтобы отправить">yankova.nastya@yandex.ru</a>
+            <h3>Адрес</h3>
+            <p>Санкт-Петербург, Альпийский переулок, 15к2</p>
+            <img src="~/images/address.png" alt="Map" />
+            <h3 id="h">Подписаться на обновления</h3>
+            <input placeholder="Введите электронную почту" id="text" maxlength="100" size="32" class="in_text" autocomplete="off" style="margin-bottom: 20px;">
+            <button id="btn" class="button9" disabled style="padding-bottom: 20px;" onclick="SignUp();">Подписаться</button>
+
+        </div>
+
+    </main>
+    <script src="~/js/contacts.js"></script>
+</body>
+</html>
